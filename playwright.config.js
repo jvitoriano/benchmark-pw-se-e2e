@@ -22,6 +22,7 @@ const config = {
                 ...devices['Desktop Firefox']
             },
         },
+        
         {
             name: 'Webkit',
             use: {
