@@ -3,11 +3,13 @@ const {
 } = require('@playwright/test');
 
 const config = {
-    baseURL: 'https://portal.facthus.edu.br',
+    baseURL: 'http://189.112.118.250/FrameHTML/web/app/edu/PortalEducacional/#/',
     globalSetup: require.resolve('./global-setup'),
-
     use: {
-        storageState: 'storageState.json'
+        storageState: 'storageState.json',
+        launchOptions: {
+            slowMo: 1000,
+        },
     },
 
     projects: [{
@@ -16,19 +18,19 @@ const config = {
                 ...devices['Desktop Chrome']
             },
         },
-        {
-            name: 'Firefox',
-            use: {
-                ...devices['Desktop Firefox']
-            },
-        },
-        
-        {
-            name: 'Webkit',
-            use: {
-                ...devices['Desktop Safari']
-            },
-        },
+        // {
+        //     name: 'Firefox',
+        //     use: {
+        //         ...devices['Desktop Firefox']
+        //     },
+        // },
+
+        // {
+        //     name: 'Webkit',
+        //     use: {
+        //         ...devices['Desktop Safari']
+        //     },
+        // },
     ],
 };
 
