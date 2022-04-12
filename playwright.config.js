@@ -7,10 +7,10 @@ const config = {
     globalSetup: require.resolve('./global-setup'),
 
     use: {
-        storageState: 'storageState.json',
-        launchOptions: {
-            slowMo: 2000,
-        },
+        storageState: 'tests/playwright/storageStates/storageState.json',
+        // launchOptions: {
+        //     slowMo: 5000,
+        // },
     },
 
     projects: [{

@@ -4,9 +4,7 @@ const {
 
 module.exports = async config => {
 
-    const browser = await chromium.launch({
-        headless: false
-    });
+    const browser = await chromium.launch();
     const page = await browser.newPage();
     await page.goto('http://191.31.240.244/');
     await page.waitForNavigation();
@@ -19,7 +17,7 @@ module.exports = async config => {
     await page.waitForNavigation();
 
     await page.context().storageState({
-        path: 'storageState.json'
+        path: 'tests/playwright/storageStates/storageState.json'
     });
 
     await browser.close();
