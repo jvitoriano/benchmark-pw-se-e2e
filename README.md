@@ -8,7 +8,9 @@ Benchmark para comparar dois frameworks de automação end to end
 $ sudo apt install npm
 
 # Instalar o NodeJs
-$ sudo apt install nodejs
+$ sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
+$ curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+$ sudo apt -y install nodejs
 
 # Instalar o Playwright e Navegadores
 $ npm i -D @playwright/test
