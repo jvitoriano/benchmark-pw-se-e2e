@@ -4,13 +4,12 @@ const {
 
 const config = {
     outputDir: './screenshots',
-    baseURL: 'http://189.112.118.250/FrameHTML/web/app/edu/PortalEducacional/#/',
     globalSetup: require.resolve('./global-setup'),
 
     use: {
         storageState: 'storageState.json',
         launchOptions: {
-            slowMo: 1000,
+            slowMo: 2000,
         },
     },
 
