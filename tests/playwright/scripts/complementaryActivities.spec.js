@@ -3,7 +3,7 @@ const {
     expect
 } = require("@playwright/test");
 
-test.only('Gerar relatório de atividades complementares', async ({
+test('Gerar relatório de atividades complementares', async ({
     page
 }) => {
 
@@ -20,9 +20,8 @@ test.only('Gerar relatório de atividades complementares', async ({
 
     await popup.waitForLoadState();
     await popup.screenshot({
-        path: `tests/playwright/screenshots/Cadastro academico - Sucesso.png`,
-        fullPage: true,
-        wait: 10000
+        path: `tests/playwright/screenshots/Atividades complementares.png`,
+        fullPage: true
     });
 
 });
