@@ -1,10 +1,12 @@
 const { Builder } = require("selenium-webdriver");
+
+const PATH_TO_DRIVER = "../drivers/chrome/chromedriver.exe";
+
 const chrome = require("selenium-webdriver/chrome");
-const service = new chrome.ServiceBuilder('/tests/selenium/drivers/chrome/chromedriver.exe');
+const service = new chrome.ServiceBuilder(PATH_TO_DRIVER);
+const driver = new Builder().forBrowser("chrome").setChromeService(service).build();
 
 async function example() {
-
-  const driver = new Builder().forBrowser("chrome").setChromeService(service).build();
 
   await driver.get("http://google.com");
 
