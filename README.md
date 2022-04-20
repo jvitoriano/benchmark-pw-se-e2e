@@ -19,3 +19,13 @@ $ npx playwright install
 # Instalando todas as depêndencias
 $ npx playwright install-deps
 ```
+
+## Build Selenium Setup
+
+```bash
+# Verificar versão do navegador para realizar a instalção correta do webdriver
+# Baixar chrome driver em: https://chromedriver.chromium.org/downloads
+
+# Instalação Selenium Webdriver com NPM:
+$ npm install selenium-webdriver
+```
