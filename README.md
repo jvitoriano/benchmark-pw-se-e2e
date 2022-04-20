@@ -29,6 +29,8 @@ $ npx playwright install-deps
 ```bash
 # Instalação Selenium Webdriver com NPM:
 $ npm install selenium-webdriver
+$ npm install -g mocha
+$ npm install --save-dev mocha
 
 # 1) Verificar versão do navegador Google Chrome que está instalado na máquina
 # 2) Realizar o download do chrome driver em: https://chromedriver.chromium.org/downloads de acordo com a versão verificada no passo 1

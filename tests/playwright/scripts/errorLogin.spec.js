@@ -12,9 +12,8 @@ test('Retorno de erro quando login inválido', async ({
     await page.fill('#Pass', 'falharLogin');
     await page.click('.container > .login-box > .form > .form__field:nth-child(4) > input');
 
-    const element = await page.$('table > tbody > tr:nth-child(2) > td > table')
-    await element.screenshot({
-        path: `tests/playwright/screenshots/Erro no Login.png`
-    });
-
+	await page.screenshot({
+		path: `../screenshots/Erro de login.png`,
+		fullPage: true
+	});
 });

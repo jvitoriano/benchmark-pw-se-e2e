@@ -3,14 +3,12 @@ const {
 } = require('@playwright/test');
 
 const config = {
-    outputDir: './screenshots',
-    globalSetup: require.resolve('./global-setup'),
+    workers: 3,
+    outputDir: 'tests/playwright/screenshots',
+    globalSetup: require.resolve('./global-setup.js'),
 
     use: {
         storageState: 'tests/playwright/storageStates/storageState.json',
-        // launchOptions: {
-        //     slowMo: 5000,
-        // },
     },
 
     projects: [{

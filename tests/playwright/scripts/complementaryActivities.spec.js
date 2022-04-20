@@ -11,7 +11,7 @@ test("Gerar relatório de atividades complementares", async ({ page }) => {
 		"http://191.31.240.244/FrameHTML//web/app/edu/PortalEducacional/#/relatorios"
 	);
 
-	const [popup] = await Promise.all([
+		await Promise.all([
 		page.waitForEvent("popup"),
 		page
 			.locator(
@@ -19,10 +19,4 @@ test("Gerar relatório de atividades complementares", async ({ page }) => {
 			)
 			.click()
 	]);
-
-	await popup.waitForLoadState();
-	await popup.screenshot({
-		path: `tests/playwright/screenshots/Atividades complementares.png`,
-		fullPage: true
-	});
 });
