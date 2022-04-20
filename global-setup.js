@@ -1,6 +1,7 @@
 const {
     chromium
 } = require('@playwright/test');
+require('dotenv').config()
 
 module.exports = async config => {
 
@@ -9,8 +10,8 @@ module.exports = async config => {
     await page.goto('http://191.31.240.244/');
     await page.waitForNavigation();
 
-    await page.fill('#User', '11800884');
-    await page.fill('#Pass', '919599jj');
+    await page.fill('#User', process.env.LOGIN_FACTHUS);
+    await page.fill('#Pass', process.env.PASSWORD_FACTHUS);
 
 
     await page.click('.container > .login-box > .form > .form__field:nth-child(4) > input');

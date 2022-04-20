@@ -11,6 +11,7 @@ $ sudo apt -y install nodejs
 
 # Instalar o gerenciador de pacotes NPM
 $ sudo apt install npm
+$ npm install dotenv
 ```
 
 ## Build Playwright Setup
