@@ -11,6 +11,8 @@ $ sudo apt -y install nodejs
 
 # Instalar o gerenciador de pacotes NPM
 $ sudo apt install npm
+
+# Instalar o dotenv para usar o arquivo .env
 $ npm install dotenv
 ```
 
