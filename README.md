@@ -39,6 +39,4 @@ $ npm install --save-dev mocha
 # 2) Realizar o download do chrome driver em: https://chromedriver.chromium.org/downloads de acordo com a versão verificada no passo 1
 # 3) Inserir o executável que foi baixado no passo 2 no diretório /tests/selenium/drivers/chrome/
 # 4) Criar variável de ambiente direcionando para o diretório do passo 3
-# 5) Em todos os arquivos de teste do selenium, para abrir o navegador e executar os scripts, é necessário direcionar o caminho do driver como destacado no passo 3, exemplo: /tests/selenium/scripts/config.js
-
 ```
