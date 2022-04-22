@@ -12,7 +12,7 @@ test("Verificar cadastro acadêmico", async ({ page }) => {
 	);
 
 	await page.screenshot({
-		path: `../screenshots/Cadastro academico - Sucesso.png`,
+		path: `../screenshots/[Playwright] Cadastro academico - Sucesso.png`,
 		fullPage: true
 	});
 });

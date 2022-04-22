@@ -13,7 +13,7 @@ test('Retorno de erro quando login inválido', async ({
     await page.click('.container > .login-box > .form > .form__field:nth-child(4) > input');
 
 	await page.screenshot({
-		path: `../screenshots/Erro de login.png`,
+		path: `../screenshots/[Playwright] Erro de login.png`,
 		fullPage: true
 	});
 });
