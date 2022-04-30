@@ -1,6 +1,17 @@
 # TCC: Benchmark Playwright vs Selenium
 Benchmark para comparar dois frameworks de automação de testes End-to-End
 
+## Run Tests
+
+```bash
+# Executar os testes no Playwright
+$ npm run playwright
+
+# Executar os testes no Selenium
+$ npm run selenium
+
+```
+
 ## Core Build
 
 ```bash
