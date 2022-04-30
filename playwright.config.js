@@ -3,7 +3,7 @@ const {
 } = require('@playwright/test');
 
 const config = {
-    workers: 3,
+    workers: 1,
     outputDir: 'tests/playwright/screenshots',
     globalSetup: require.resolve('./global-setup.js'),
 

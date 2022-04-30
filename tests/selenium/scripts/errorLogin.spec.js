@@ -2,7 +2,7 @@
 const { Builder, By, Key, until } = require('selenium-webdriver')
 require('dotenv').config()
 
-describe('loginSelenium', function () {
+describe('errorLogin', function () {
   this.timeout(30000)
   let driver
   let vars
@@ -13,22 +13,20 @@ describe('loginSelenium', function () {
   afterEach(async function () {
     await driver.quit();
   })
-  it('loginSelenium', async function () {
+  it('Erro de Login', async function () {
     await driver.get("http://portal.facthus.edu.br/FrameHTML/web/app/Edu/PortalEducacional/login/");
-    await driver.manage().window().setRect({ width: 974, height: 1032 });
+    await driver.manage().window().setRect({ width: 1936, height: 1048 })
     await driver.sleep(2000);
     await driver.findElement(By.id("User")).click();
     await driver.findElement(By.id("User")).sendKeys(process.env.LOGIN_FACTHUS);
     await driver.findElement(By.id("Pass")).click();
-    await driver.findElement(By.id("Pass")).sendKeys(process.env.PASSWORD_FACTHUS);
+    await driver.findElement(By.id("Pass")).sendKeys('falharLogin');
     await driver.findElement(By.css(".container > .login-box > .form > .form__field:nth-child(4) > input")).click();
-    await driver.sleep(5000);
+    await driver.sleep(2000);
     await driver.takeScreenshot().then(
       function (image) {
-        require('fs').writeFileSync(`tests/selenium/screenshots/[Selenium] Cadastro academico.png`, image, 'base64');
+        require('fs').writeFileSync(`tests/selenium/screenshots/[Selenium] Erro de Login.png`, image, 'base64');
       }
     );
-    await driver.findElement(By.css("#menu-header-items > .list-inline > .dropdown > #desktopHeaderMenu > .caret")).click();
-    await driver.findElement(By.linkText("Sair")).click();
   })
 })

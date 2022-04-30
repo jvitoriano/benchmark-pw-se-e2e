@@ -5,7 +5,9 @@ require('dotenv').config()
 
 module.exports = async config => {
 
-    const browser = await chromium.launch();
+    const browser = await chromium.launch({
+        headless: false
+    });
     const page = await browser.newPage();
     await page.goto('http://191.31.240.244/');
     await page.waitForNavigation();

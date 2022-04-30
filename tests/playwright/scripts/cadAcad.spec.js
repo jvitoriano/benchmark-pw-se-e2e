@@ -12,7 +12,8 @@ test("Verificar cadastro acadêmico", async ({ page }) => {
 	);
 
 	await page.screenshot({
-		path: `../screenshots/[Playwright] Cadastro academico - Sucesso.png`,
-		fullPage: true
+		path: `tests/playwright/screenshots/[Playwright] Cadastro academico - Sucesso.png`,
+		fullPage: true,
+		timeout: 5000
 	});
 });
