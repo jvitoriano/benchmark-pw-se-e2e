@@ -1,6 +1,6 @@
 const { test, expect } = require("@playwright/test");
 
-test.only("Validar funcionamento do botão de visualizar notas", async ({ page }) => {
+test("Validar funcionamento do botão de visualizar notas", async ({ page }) => {
 	await page.goto(
 		"http://191.31.240.244/FrameHTML//web/app/edu/PortalEducacional/#/"
 	);
